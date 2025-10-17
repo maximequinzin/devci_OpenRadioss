@@ -28,7 +28,7 @@ jobs:
           # hostname
           # ping -c 4 google.com
           # ping -c 4 fr-qafactorydev.europe.altair.com
-          ip a
+          # ip a
           ls -l /var/run/docker.sock
           docker ps -a 
           echo "----"
