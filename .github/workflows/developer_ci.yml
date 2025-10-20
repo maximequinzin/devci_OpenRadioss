@@ -29,11 +29,8 @@ jobs:
           ping -c 4 google.com
           ping -c 4 fr-qafactorydev.europe.altair.com
           ip a
-          ls -l /var/run/docker.sock
-          # docker ps -a 
           echo "----"
-          wget http://massic.eu/Tarifs_Massic.pdf
-          # docker images
+          curl -L -o test.pdf http://massic.eu/Tarifs_Massic.pdf
           echo "----"
           ls -l
 
