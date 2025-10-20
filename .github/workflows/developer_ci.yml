@@ -21,7 +21,6 @@ jobs:
     container: 
       image: fr-qafactorydev.europe.altair.com/common-linux64
       # image: docker
-      network: none
     steps:
       - name: Test system info
         run: |
