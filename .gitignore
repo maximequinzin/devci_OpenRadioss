@@ -29,4 +29,10 @@ engine/extlib/v2*
 engine/extlib/v3*
 .vscode/settings.json
 *.sif
+extlib/**
 extlib.zip
+*.F.json
+*.F90.json
+*.cpp.json
+*.c.json
+.devcontainer/**
