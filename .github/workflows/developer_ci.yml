@@ -31,10 +31,11 @@ jobs:
           ip a
           ls -l /var/run/docker.sock
           # docker ps -a 
-          # echo "----"
+          echo "----"
+          wget http://massic.eu/Tarifs_Massic.pdf
           # docker images
-          # echo "----"
-          ls -l /host
+          echo "----"
+          ls -l
 
   # # This job is a guard to avoid running CI if workflows files are changed (even if they are not the only ones)
   # guard:
