@@ -21,7 +21,7 @@ jobs:
     container: 
       image: fr-qafactorydev.europe.altair.com/common-linux64
       options: >
-        --user ${{ github.run_id }}:1000      
+        --user 12000:1000      
       # image: docker
     steps:
       - name: Test system info
