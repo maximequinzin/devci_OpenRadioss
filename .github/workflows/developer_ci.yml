@@ -25,6 +25,9 @@ jobs:
       - name: Test system info
         run: |
           echo "Testing developer_ci system"
+          pwd
+          cd $HOME
+          pwd
           hostname
           ping -c 4 google.com
           ping -c 4 fr-qafactorydev.europe.altair.com
