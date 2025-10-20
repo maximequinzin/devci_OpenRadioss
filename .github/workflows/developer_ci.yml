@@ -19,9 +19,7 @@ jobs:
   test-system:
     runs-on: ["starter_linux64_gf","fr-shady"]
     container: 
-      image: fr-qafactorydev.europe.altair.com/common-linux64
-      options: >
-        --user 12000:1000      
+      image: fr-qafactorydev.europe.altair.com/common-linux64:latest-uid10000    
       # image: docker
     steps:
       - name: Test system info
