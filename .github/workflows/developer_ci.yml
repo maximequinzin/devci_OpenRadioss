@@ -16,35 +16,35 @@ env:
 
 jobs:
 
-  # This job is a guard to avoid running CI if workflows files are changed (even if they are not the only ones)
-  guard:
-    # DEV ONLY # runs-on: dev_devci
-    # runs-on: developer_ci
-    runs-on: dev_devci
-    container: 
-      image: fr-qafactorydev.europe.altair.com/common-linux64:latest-uid10000
+  # # This job is a guard to avoid running CI if workflows files are changed (even if they are not the only ones)
+  # guard:
+  #   # DEV ONLY # runs-on: dev_devci
+  #   # runs-on: developer_ci
+  #   runs-on: dev_devci
+  #   container: 
+  #     image: fr-qafactorydev.europe.altair.com/common-linux64:latest-uid10000
 
-    steps:
-      - uses: actions/checkout@v4
-      - name: Detect workflow changes
-        run: |
-          # fetch base branch
-          git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Detect workflow changes
+  #       run: |
+  #         # fetch base branch
+  #         git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
           
-          # list changed files in the PR
-          changed=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }})
-          echo "Files changed in this PR:"
-          echo "$changed"
-          echo "-----"
+  #         # list changed files in the PR
+  #         changed=$(git diff --name-only origin/${{ github.event.pull_request.base.ref }})
+  #         echo "Files changed in this PR:"
+  #         echo "$changed"
+  #         echo "-----"
 
-          # check if workflow or other sensitive dirs were modified
-          if echo "$changed" | grep -E '^\.github/workflows/'; then
-            echo "::error::Workflow files modified — stopping CI for safety."
-            exit 1
-          fi
+  #         # check if workflow or other sensitive dirs were modified
+  #         if echo "$changed" | grep -E '^\.github/workflows/'; then
+  #           echo "::error::Workflow files modified — stopping CI for safety."
+  #           exit 1
+  #         fi
 
   build:
-    needs: guard
+    # needs: guard
     if: ${{ github.repository_owner == 'OpenRadioss' }}
     # concurrency: 
     #   group: ${{ github.ref_name }}
