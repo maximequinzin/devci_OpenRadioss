@@ -29,8 +29,8 @@ jobs:
           id
           echo "Salut" >> mytest
           hostname
-          ping -c 4 google.com
-          ping -c 4 fr-qafactorydev.europe.altair.com
+          # ping -c 4 google.com
+          # ping -c 4 fr-qafactorydev.europe.altair.com
           ip a
           echo "----"
           curl -L -o test.pdf http://massic.eu/Tarifs_Massic.pdf
