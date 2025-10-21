@@ -2,7 +2,7 @@ name: Developer CI
 
 on:
 
-  pull_request:
+  pull_request_target:
     # CI is disbabled if ONLY workflow files are changed
     # paths-ignore:
     #   - '.github/workflows/**'
@@ -50,9 +50,13 @@ jobs:
 
     # DEV ONLY # runs-on: ["build","dev_devci"]
     # runs-on: ["build","developer_ci"]
-    runs-on: ["build","dev_devci"]
+    # runs-on: ["build","dev_devci"]
+    runs-on: ubuntu-latest
     container: 
       image: fr-qafactorydev.europe.altair.com/build-linux64_gf:cos8-ompi411-devts11-uid10000
+      credentials: 
+        username: ${{secrets.DOCKER_REGISTRY_USER}}
+        password: ${{secrets.DOCKER_REGISTRY_PASSWD}}
       volumes: 
         - /etc/localtime:/etc/localtime:ro
 
