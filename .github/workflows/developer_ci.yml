@@ -2,6 +2,8 @@ name: Developer CI
 
 on:
 
+  pull_request:
+
   pull_request_target:
     # CI is disbabled if ONLY workflow files are changed
     # paths-ignore:
