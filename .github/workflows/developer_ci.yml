@@ -121,7 +121,7 @@ jobs:
 
           cmd="./build_script.sh -release -arch=${{ matrix.os }}_gf -prec=${{ matrix.precision }} -nt=${{ env.BUILD_NB_THREAD }} -static-link $mpi_opts"
           echo "========================================="
-          echo "--  BUILD ${{ matrix.build }} --"   
+          echo "--  BUILD ${{ matrix.build }} --" 
           echo "--  $cmd --"   
           echo "========================================="
           source /home/adminqa/.bashrc
