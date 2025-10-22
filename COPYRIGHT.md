@@ -15,7 +15,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ---                                                                                
-Commercial Alternative: Altair Radioss Software 
+Commercial Alternative: Altair Radioss Software  xxxxx
 
 As an alternative to this open-source version, Altair also offers Altair Radioss 
 software under a commercial license.  
