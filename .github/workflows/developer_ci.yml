@@ -73,12 +73,12 @@ jobs:
   #         #   os: linux64 
   #         #   binary: engine
 
-  #   steps:
+    steps:
 
-  #     - name: Clean local exe dir
-  #       run: |
-  #         rm -rf exec
-  #         md5sum exec/* || echo "Nothing in exec/" 
+      - name: Clean local exe dir
+        run: |
+          rm -rf exec
+          md5sum exec/* || echo "Nothing in exec/" 
 
   #     # Get last git modifications, WS is not persistent here
   #     - uses: actions/checkout@v4
