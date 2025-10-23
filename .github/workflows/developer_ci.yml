@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Detect workflow changes
         run: |
-          echo "This is original CI from main"
+          echo "This is MODIFIED CI from main"
           # # fetch base branch
           # git fetch origin ${{ github.event.pull_request.base.ref }} --depth=1
           
